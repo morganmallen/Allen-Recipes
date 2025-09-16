@@ -1,0 +1,24 @@
+{
+  "name": "allen-recipes",
+  "version": "1.0.0",
+  "description": "A recipe site monorepo with React frontend and Hono backend",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "pnpm@10.16.1",
+  "scripts": {
+    "dev": "pnpm --parallel run dev",
+    "build": "pnpm --parallel run build",
+    "lint": "pnpm --parallel run lint",
+    "type-check": "pnpm --parallel run type-check",
+    "clean": "pnpm --parallel run clean"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "eslint": "^9.15.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0"
+  }
+}
