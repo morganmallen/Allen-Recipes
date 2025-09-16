@@ -56,3 +56,4 @@ allen-recipes/
 - **Development**: Hot reload for both frontend and backend
 - **Shared Code**: Common types and utilities in shared package
 
+
