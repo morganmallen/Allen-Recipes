@@ -1,3 +1,141 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* CSS Custom Properties for dynamic color switching */
+:root {
+  /* Primary Colors */
+  --color-primary: #0ea5e9;
+  --color-primary-light: #7dd3fc;
+  --color-primary-dark: #0369a1;
+  
+  /* Secondary Colors */
+  --color-secondary: #64748b;
+  --color-secondary-light: #cbd5e1;
+  --color-secondary-dark: #334155;
+  
+  /* Accent Colors */
+  --color-accent: #ef4444;
+  --color-accent-light: #fca5a5;
+  --color-accent-dark: #b91c1c;
+  
+  /* Status Colors */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  
+  /* Neutral Colors */
+  --color-background: #fafafa;
+  --color-surface: #f5f5f5;
+  --color-text: #171717;
+  --color-text-light: #737373;
+  --color-border: #e5e5e5;
+}
+
+/* Dark mode color overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #38bdf8;
+    --color-primary-light: #0ea5e9;
+    --color-primary-dark: #0284c7;
+    
+    --color-secondary: #94a3b8;
+    --color-secondary-light: #64748b;
+    --color-secondary-dark: #475569;
+    
+    --color-background: #0f172a;
+    --color-surface: #1e293b;
+    --color-text: #f8fafc;
+    --color-text-light: #cbd5e1;
+    --color-border: #334155;
+  }
+}
+
+/* Custom utility classes for semantic colors */
+@layer utilities {
+  .color-primary {
+    color: var(--color-primary);
+  }
+  
+  .color-primary-light {
+    color: var(--color-primary-light);
+  }
+  
+  .color-primary-dark {
+    color: var(--color-primary-dark);
+  }
+  
+  .color-secondary {
+    color: var(--color-secondary);
+  }
+  
+  .color-secondary-light {
+    color: var(--color-secondary-light);
+  }
+  
+  .color-secondary-dark {
+    color: var(--color-secondary-dark);
+  }
+  
+  .color-accent {
+    color: var(--color-accent);
+  }
+  
+  .color-success {
+    color: var(--color-success);
+  }
+  
+  .color-warning {
+    color: var(--color-warning);
+  }
+  
+  .color-error {
+    color: var(--color-error);
+  }
+  
+  .color-text {
+    color: var(--color-text);
+  }
+  
+  .color-text-light {
+    color: var(--color-text-light);
+  }
+  
+  /* Background utilities */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  
+  .bg-primary-light {
+    background-color: var(--color-primary-light);
+  }
+  
+  .bg-primary-dark {
+    background-color: var(--color-primary-dark);
+  }
+  
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+  
+  .bg-background {
+    background-color: var(--color-background);
+  }
+  
+  /* Border utilities */
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+  
+  .border-secondary {
+    border-color: var(--color-secondary);
+  }
+  
+  .border-default {
+    border-color: var(--color-border);
+  }
+}
