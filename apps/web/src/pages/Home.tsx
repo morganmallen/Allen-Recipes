@@ -1,24 +1,13 @@
-import RecipeCard from '../components/recipeCard'
-import AddRecipeForm from '../components/addRecipeForm'
-import { useState } from 'react'
-
-export default function Home() {
-  const [showAddRecipeForm, setShowAddRecipeForm] = useState(false);
-
-  const handleShowAddRecipeForm = () => {
-    setShowAddRecipeForm(true);
-  }
-
-  const handleCloseAddRecipeForm = () => {
-    setShowAddRecipeForm(false);
-  }
-
+function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-      <button onClick={handleShowAddRecipeForm}>Add Recipe</button>
-      {showAddRecipeForm && <AddRecipeForm onClose={handleCloseAddRecipeForm} />}
-      <RecipeCard className='w-64 h-64'/>
+    <div className="flex flex-col items-center justify-center h-screen gap-4">
+      <h1>
+        Welcome to my recipe website. Here you can find all of the recipes that
+        Alissa and I have tried and keep coming back to. I hope you enjoy them as much as we do!
+      </h1>
+      <a href="/recipes"><button className="bg-primary text-white px-4 py-2 rounded-md">View Recipes</button></a>
     </div>
   )
 }
+
+export default Home

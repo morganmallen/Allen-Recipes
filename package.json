@@ -7,7 +7,7 @@
     "apps/*",
     "packages/*"
   ],
-  "packageManager": "pnpm@10.16.1",
+  "packageManager": "pnpm@10.17.1",
   "scripts": {
     "dev": "pnpm --parallel run dev",
     "build": "pnpm --parallel run build",
